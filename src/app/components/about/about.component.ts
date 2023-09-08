@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      En 2021 comencé mi camino como desarrollador Full-Stack. Hasta ahora he
+    <p class="">
+      En 2021 comencé mi camino como desarrollador Full-Stack y hasta ahora he
       tenido la oportunidad de hacer desarrollo Front-end y Back-end, DevOps e
       Infraestructura. Hoy en día estoy realmente interesado en crear productos
       que vivan en el Internet.
