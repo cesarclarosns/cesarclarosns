@@ -18,7 +18,7 @@ jobs:
             cesarclarosns/cesarclarosns
           tags: |
             type=sha,enable=true,priority=100,prefix=sha-,suffix=,format=short
-            type=raw,value=latest
+            type=raw,value=latest,priority=200
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
