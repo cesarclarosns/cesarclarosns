@@ -20,7 +20,7 @@ interface JobExperience {
 export class ExperienceComponent {
   experiences: JobExperience[] = [
     {
-      period: 'APRIL 2022 - AUGUST 2023',
+      period: 'ABRIL 2022 - AGOSTO 2023',
       title: 'Desarrollador Full-Stack en Radar',
       link: 'https://www.radarholding.com/',
       description: `Colaboré en el análisis, diseño, desarrollo e implementación de aplicaciones web que facilitaron las operaciones comerciales del día a día de la empresa que van desde la gestión de etapas de los procesos de operación de la empresa hasta la generación de reportes. Haciendo desarrollo Front-end y Back-end, y automatizaciones con Node/JavaScript/TypeScript, Python y PHP, usando frameworks como Angular, Express, NestJS, FastAPI y Laravel. Además también colaboré en el análisis, diseño, desarrollo e implementación de DevOps y una nueva Infraestructura en AWS para la mejor gestión de las aplicaciones y servicios que se usan día a día en la empresa.`,
@@ -101,7 +101,7 @@ export class ExperienceComponent {
           ],
         },
         {
-          title: 'Otras tecnologias y herramientas',
+          title: 'Otras tecnologías y herramientas',
           skills: [
             {
               title: 'Docker',

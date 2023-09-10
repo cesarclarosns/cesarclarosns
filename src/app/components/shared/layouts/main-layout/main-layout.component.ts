@@ -10,7 +10,7 @@ import { FooterComponent } from 'src/app/components/footer/footer.component';
   imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   template: `
     <app-header></app-header>
-    <div class="container mx-auto h-screen py-40">
+    <div>
       <router-outlet><ng-content></ng-content></router-outlet>
     </div>
     <app-footer></app-footer>

@@ -20,6 +20,7 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Chatto',
+      link: 'https://chatto.cesarclarsons.com',
       description: `Chat virtual aleatorio, así es, parecido a Omegle, con la diferencia de que podrás tener listas de amigos y la opción de filtrar el chat virtual para poder conversar con algún tipo de persona, por ejemplo, con algún trastorno del habla.`,
       hardSkills: [
         {
@@ -67,7 +68,7 @@ export class ProjectsComponent {
           ],
         },
         {
-          title: 'Otras tecnologias',
+          title: 'Otras tecnologías y herramientas',
           skills: [
             {
               title: 'Docker',
@@ -84,13 +85,14 @@ export class ProjectsComponent {
     },
     {
       title: 'Splendor Clothing',
-      description: `Chat virtual aleatorio, así es, parecido a Omegle, con la diferencia de que podrás tener listas de amigos y la opción de filtrar el chat virtual para poder conversar con algún tipo de persona, por ejemplo, con algún trastorno del habla.`,
+      link: 'https://splendorclothing.cesarclarosns.com',
+      description: `E-commerce de moda.`,
       hardSkills: [
         {
           title: 'Lenguajes',
           skills: [
             {
-              title: 'Node/TypeScript',
+              title: 'Node/JavaScript',
             },
           ],
         },
@@ -98,10 +100,10 @@ export class ProjectsComponent {
           title: 'Frameworks',
           skills: [
             {
-              title: 'Angular',
+              title: 'React',
             },
             {
-              title: 'NestJS',
+              title: 'Express',
             },
           ],
         },
@@ -109,7 +111,7 @@ export class ProjectsComponent {
           title: 'Base de datos',
           skills: [
             {
-              title: 'PostgreSQL (TimescaleDB)',
+              title: 'Firebase (Firestore)',
             },
           ],
         },
@@ -120,27 +122,24 @@ export class ProjectsComponent {
               title: 'EC2',
             },
             {
-              title: 'S3',
-            },
-            {
-              title: 'SES',
-            },
-            {
               title: 'Route53',
             },
           ],
         },
         {
-          title: 'Otras tecnologias',
+          title: 'Otras tecnologías y herramientas',
           skills: [
             {
               title: 'Docker',
             },
             {
-              title: 'LiveKit',
+              title: 'Traefik',
             },
             {
-              title: 'Traefik',
+              title: 'Firebase',
+            },
+            {
+              title: 'Stripe',
             },
           ],
         },

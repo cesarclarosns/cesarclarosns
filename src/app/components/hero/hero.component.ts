@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
       </div>
       <div>
         <h1 class="font-bold text-xl">
-          Desarrollador Full-Stack e Ingeniero en Biotecnología
+          Desarrollador Full-Stack | Ingeniero en Biotecnología
         </h1>
       </div>
     </div>

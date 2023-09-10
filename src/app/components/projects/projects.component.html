@@ -1,48 +1,50 @@
-<h1 class="font-bold">PROYECTOS</h1>
+<section id="projects" class="scroll-mt-40">
+  <h1 class="font-bold">PROYECTOS</h1>
 
-<div class="flex flex-col gap-10 my-4">
-  <div
-    *ngFor="let project of projects"
-    class="flex flex-col gap-4 hover:bg-base-content/10 backdrop-blur rounded-xl drop-shadow-lg p-5"
-  >
-    <div>
-      <div class="flex flex-row items-center gap-2">
-        <span class="font-bold">{{ project.title }}</span>
-        <a [href]="project.link" target="_blank">
-          <app-arrow-top-right-icon
-            class="h-5 hover:cursor-pointer hover:text-secondary-focus"
-            (click)="(null)"
-          ></app-arrow-top-right-icon>
-        </a>
+  <div class="flex flex-col gap-10 my-4">
+    <div
+      *ngFor="let project of projects"
+      class="flex flex-col gap-4 hover:bg-base-content/10 backdrop-blur rounded-xl drop-shadow-lg p-5 opacity-80"
+    >
+      <div>
+        <div class="flex flex-row items-center gap-2">
+          <span class="font-bold">{{ project.title }}</span>
+          <a [href]="project.link" target="_blank">
+            <app-arrow-top-right-icon
+              class="h-5 hover:cursor-pointer hover:text-secondary-focus"
+              (click)="(null)"
+            ></app-arrow-top-right-icon>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <span>{{ project.description }}</span>
-    </div>
+      <div>
+        <span>{{ project.description }}</span>
+      </div>
 
-    <div>
-      <div
-        *ngFor="let hardSkill of project.hardSkills"
-        class="flex flex-row gap-5"
-      >
-        <p class="font-semibold">{{ hardSkill.title }}:</p>
-        <ul class="">
-          <li
-            *ngFor="let skill of hardSkill.skills"
-            class="inline hover:cursor-pointer"
-          >
-            <a class="group transition-all duration-300 ease-in-out">
-              <span
-                class="bg-left-bottom bg-gradient-to-r from-secondary-focus to-secondary-focus bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-              >
-                {{ skill.title }}
-              </span>
-            </a>
-            &nbsp;&nbsp;
-          </li>
-        </ul>
+      <div>
+        <div
+          *ngFor="let hardSkill of project.hardSkills"
+          class="flex flex-row gap-5"
+        >
+          <p class="font-semibold">{{ hardSkill.title }}:</p>
+          <ul class="">
+            <li
+              *ngFor="let skill of hardSkill.skills"
+              class="inline hover:cursor-pointer"
+            >
+              <a class="group transition-all duration-300 ease-in-out">
+                <span
+                  class="bg-left-bottom bg-gradient-to-r from-secondary-focus to-secondary-focus bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                >
+                  {{ skill.title }}
+                </span>
+              </a>
+              &nbsp;&nbsp;
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
