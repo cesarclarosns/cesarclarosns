@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ThemeService } from './services/theme.service';
+import { AppService } from './services/app.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,8 @@ import { ThemeService } from './services/theme.service';
   styles: [],
 })
 export class AppComponent {
-  constructor(private themeService: ThemeService) {}
+  constructor(
+    private themeService: ThemeService,
+    private appService: AppService,
+  ) {}
 }
