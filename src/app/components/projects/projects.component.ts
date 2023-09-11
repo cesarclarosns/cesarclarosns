@@ -20,7 +20,7 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Chatto',
-      link: 'https://chatto.cesarclarsons.com',
+      link: 'https://chatto.cesarclarosns.com',
       description: `Chat virtual aleatorio, así es, parecido a Omegle, con la diferencia de que podrás tener listas de amigos y la opción de filtrar el chat virtual para poder conversar con algún tipo de persona, por ejemplo, con algún trastorno del habla.`,
       hardSkills: [
         {
