@@ -17,18 +17,42 @@ import { ThemeService } from 'src/app/services/theme.service';
     ArrowTopRightIconComponent,
   ],
   template: `
-    <div class="flex flex-row gap-4">
-      <app-github-logo-icon
-        class="h-6 hover:cursor-pointer hover:text-secondary-focus"
-        (click)="(null)"
-      ></app-github-logo-icon>
-      <app-instagram-logo-icon
-        class="h-6 hover:cursor-pointer hover:text-secondary-focus"
-      ></app-instagram-logo-icon>
-      <app-linkedin-logo-icon
-        class="h-6 hover:cursor-pointer hover:text-secondary-focus"
-      ></app-linkedin-logo-icon>
-    </div>
+    <ul class="flex flex-row gap-2">
+      <li class="hover:cursor-pointer">
+        <a
+          class="group transition-all duration-300 ease-in-out"
+          href="https://github.com/cesarclarosns"
+          target="_blank"
+        >
+          <app-github-logo-icon
+            class="h-6 hover:cursor-pointer hover:text-secondary-focus"
+            (click)="(null)"
+          ></app-github-logo-icon>
+        </a>
+      </li>
+      <li class="hover:cursor-pointer">
+        <a
+          class="group transition-all duration-300 ease-in-out"
+          href="https://www.instagram.com/cesarclarosns/"
+          target="_blank"
+        >
+          <app-instagram-logo-icon
+            class="h-6 hover:cursor-pointer hover:text-secondary-focus"
+          ></app-instagram-logo-icon>
+        </a>
+      </li>
+      <li class="hover:cursor-pointer">
+        <a
+          class="group transition-all duration-300 ease-in-out"
+          href="https://www.linkedin.com/in/cesarclarosns/"
+          target="_blank"
+        >
+          <app-linkedin-logo-icon
+            class="h-6 hover:cursor-pointer hover:text-secondary-focus"
+          ></app-linkedin-logo-icon>
+        </a>
+      </li>
+    </ul>
   `,
   styles: [],
 })
