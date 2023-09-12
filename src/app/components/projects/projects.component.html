@@ -9,11 +9,15 @@
       <div>
         <div class="flex flex-row items-center gap-2">
           <span class="font-bold">{{ project.title }}</span>
-          <a [href]="project.link" target="_blank">
+          <a [href]="project.url" target="_blank">
             <app-arrow-top-right-icon
               class="h-5 hover:cursor-pointer hover:text-secondary-focus"
-              (click)="(null)"
             ></app-arrow-top-right-icon>
+          </a>
+          <a [href]="project.repoUrl" target="_blank">
+            <app-github-logo-icon
+              class="h-5 hover:cursor-pointer hover:text-secondary-focus"
+            ></app-github-logo-icon>
           </a>
         </div>
       </div>

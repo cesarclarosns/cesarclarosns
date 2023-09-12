@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArrowTopRightIconComponent } from '../shared/icons/arrow-top-right-icon/arrow-top-right-icon.component';
+import { GithubLogoIconComponent } from '../shared/icons/github-logo-icon/github-logo-icon.component';
 
 interface Project {
   title: string;
   description: string;
-  link?: string;
+  url?: string;
+  repoUrl?: string;
   hardSkills: { title: string; skills: { title: string; url?: string }[] }[];
 }
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ArrowTopRightIconComponent],
+  imports: [CommonModule, ArrowTopRightIconComponent, GithubLogoIconComponent],
   templateUrl: './projects.component.html',
   styles: [],
 })
@@ -20,7 +22,8 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Chatto',
-      link: 'https://chatto.cesarclarosns.com',
+      url: 'https://chatto.cesarclarosns.com',
+      repoUrl: 'https://github.com/cesarclarosns/chatto',
       description: `Chat virtual aleatorio, así es, parecido a Omegle, con la diferencia de que podrás tener listas de amigos y la opción de filtrar el chat virtual para poder conversar con algún tipo de persona, por ejemplo, con algún trastorno del habla.`,
       hardSkills: [
         {
@@ -51,6 +54,17 @@ export class ProjectsComponent {
           ],
         },
         {
+          title: 'Herramientas de CI/CD',
+          skills: [
+            {
+              title: 'GitHub',
+            },
+            {
+              title: 'GitHub Actions',
+            },
+          ],
+        },
+        {
           title: 'Servicios de AWS',
           skills: [
             {
@@ -68,7 +82,7 @@ export class ProjectsComponent {
           ],
         },
         {
-          title: 'Otras tecnologías y herramientas',
+          title: 'Otras tecnologías y herramieyntas',
           skills: [
             {
               title: 'Docker',
@@ -79,13 +93,17 @@ export class ProjectsComponent {
             {
               title: 'Traefik',
             },
+            {
+              title: 'Stripe',
+            },
           ],
         },
       ],
     },
     {
       title: 'Splendor Clothing',
-      link: 'https://splendorclothing.cesarclarosns.com',
+      url: 'https://splendorclothing.cesarclarosns.com',
+      repoUrl: 'https://github.com/cesarclarosns/splendor-clothing',
       description: `E-commerce de moda.`,
       hardSkills: [
         {
@@ -112,6 +130,17 @@ export class ProjectsComponent {
           skills: [
             {
               title: 'Firebase (Firestore)',
+            },
+          ],
+        },
+        {
+          title: 'Herramientas de CI/CD',
+          skills: [
+            {
+              title: 'GitHub',
+            },
+            {
+              title: 'GitHub Actions',
             },
           ],
         },
