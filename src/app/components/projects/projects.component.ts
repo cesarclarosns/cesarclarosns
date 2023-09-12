@@ -62,6 +62,9 @@ export class ProjectsComponent {
             {
               title: 'GitHub Actions',
             },
+            {
+              title: 'Watchtower (Docker)',
+            },
           ],
         },
         {
@@ -141,6 +144,9 @@ export class ProjectsComponent {
             },
             {
               title: 'GitHub Actions',
+            },
+            {
+              title: 'Watchtower (Docker)',
             },
           ],
         },
