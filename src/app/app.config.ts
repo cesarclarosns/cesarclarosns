@@ -6,7 +6,6 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { ThemeService } from './services/theme.service';
 import { AppService } from './services/app.service';
 import { CookieService } from 'ngx-cookie-service';
-import { PromptUpdateService } from './services/prompt-update.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -27,10 +26,6 @@ export const appConfig: ApplicationConfig = {
     {
       provide: CookieService,
       useClass: CookieService,
-    },
-    {
-      provide: PromptUpdateService,
-      useClass: PromptUpdateService,
     },
   ],
 };
