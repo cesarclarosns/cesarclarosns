@@ -5,6 +5,7 @@ import { GlobeIconComponent } from '../shared/icons/globe-icon/globe-icon.compon
 import { MoonIconComponent } from '../shared/icons/moon-icon/moon-icon.component';
 import { SunIconComponent } from '../shared/icons/sun-icon/sun-icon.component';
 import { ThemeService } from 'src/app/services/theme.service';
+import { LanguageTranslationIconComponent } from '../shared/icons/language-translation-icon/language-translation-icon.component';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ import { ThemeService } from 'src/app/services/theme.service';
     GlobeIconComponent,
     MoonIconComponent,
     SunIconComponent,
+    LanguageTranslationIconComponent,
   ],
   templateUrl: './header.component.html',
   styles: [],
