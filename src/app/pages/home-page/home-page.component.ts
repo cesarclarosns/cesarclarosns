@@ -50,12 +50,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    console.log({
-      sections: this.sectionsRef,
-      aboutRef: this.aboutRef,
-      experienceRef: this.experienceRef,
-      projectsRef: this.projectsRef,
-    });
+    // console.log({
+    //   sections: this.sectionsRef,
+    //   aboutRef: this.aboutRef,
+    //   experienceRef: this.experienceRef,
+    //   projectsRef: this.projectsRef,
+    // });
   }
 
   showRefs() {
