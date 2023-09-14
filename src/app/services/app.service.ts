@@ -15,10 +15,8 @@ export class AppService {
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
       )
       .subscribe((evt) => {
-        console.log('Scheduling update to occur in 60s');
-        setTimeout(() => {
-          document.location.reload();
-        }, 60 * 1000);
+        console.log('Updating app');
+        document.location.reload();
       });
   }
 }
