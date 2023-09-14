@@ -17,7 +17,7 @@ import { ThemeService } from 'src/app/services/theme.service';
     ArrowTopRightIconComponent,
   ],
   template: `
-    <ul class="flex flex-row gap-4">
+    <ul class="flex flex-row gap-3">
       <li class="hover:cursor-pointer">
         <a
           class="group transition-all duration-300 ease-in-out"
