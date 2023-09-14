@@ -1,22 +1,32 @@
-import { Injectable } from '@angular/core';
+import { ApplicationRef, Injectable } from '@angular/core';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
-import { filter, tap } from 'rxjs';
+import { concat, filter, first, interval, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppService {
-  constructor(private swUpdate: SwUpdate) {
-    this.swUpdate.versionUpdates
-      .pipe(
-        tap((evt) => {
-          console.log('Version event:', { evt });
-        }),
-        filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
-      )
-      .subscribe((evt) => {
-        console.log('Updating app');
-        document.location.reload();
-      });
+  constructor(appRef: ApplicationRef, swUpdate: SwUpdate) {
+    /**
+     * Check for updates on a schedule
+     */
+
+    const appIsStable$ = appRef.isStable.pipe(first((isStable) => isStable));
+    const everyFiveMinutes$ = interval(5 * 60 * 1000);
+    const everyFiveMinutesOnceAppIsStable$ = concat(
+      appIsStable$,
+      everyFiveMinutes$,
+    );
+
+    everyFiveMinutesOnceAppIsStable$.subscribe(async () => {
+      try {
+        const updateFound = await swUpdate.checkForUpdate();
+        if (updateFound) {
+          document.location.reload();
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
   }
 }
