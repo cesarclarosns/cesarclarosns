@@ -85,7 +85,7 @@ export class ProjectsComponent {
           ],
         },
         {
-          title: 'Otras tecnologías y herramieyntas',
+          title: 'Otras tecnologías y herramientas',
           skills: [
             {
               title: 'Docker',
