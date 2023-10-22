@@ -26,27 +26,29 @@
         <span>{{ project.description }}</span>
       </div>
 
-      <div>
+      <div class="flex flex-col gap-2">
         <div
           *ngFor="let hardSkill of project.hardSkills"
-          class="flex flex-row gap-5"
+          class="flex flex-col gap-5"
         >
-          <p class="font-semibold">{{ hardSkill.title }}:</p>
-          <ul class="">
-            <li
-              *ngFor="let skill of hardSkill.skills"
-              class="inline hover:cursor-pointer"
-            >
-              <a class="group transition-all duration-300 ease-in-out">
-                <span
-                  class="bg-left-bottom bg-gradient-to-r from-secondary-focus to-secondary-focus bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                >
-                  {{ skill.title }}
-                </span>
-              </a>
-              &nbsp;&nbsp;
-            </li>
-          </ul>
+          <div>
+            <p class="font-semibold">{{ hardSkill.title }}:</p>
+            <ul class="list-disc pl-5">
+              <li
+                *ngFor="let skill of hardSkill.skills"
+                class="group hover:cursor-pointer hover:text-secondary-focus"
+              >
+                <a class="transition-all duration-300 ease-in-out">
+                  <span
+                    class="bg-left-bottom bg-gradient-to-r from-secondary-focus to-secondary-focus bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                  >
+                    {{ skill.title }}
+                  </span>
+                </a>
+                &nbsp;&nbsp;
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

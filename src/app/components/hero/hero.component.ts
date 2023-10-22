@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';
         <h1 class="font-bold text-5xl">César Claros</h1>
       </div>
       <div>
-        <h1 class="font-bold text-xl">
-          Desarrollador Full-Stack | Ingeniero en Biotecnología
+        <h1 class="text-xl">
+          <span class="font-bold">Desarrollador Full-Stack</span> ||
+          <span class="font-bold">Ingeniero en Biotecnología</span>
         </h1>
       </div>
     </div>
