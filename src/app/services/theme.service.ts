@@ -7,7 +7,7 @@ import { Theme } from '../types/theme.type';
   providedIn: 'root',
 })
 export class ThemeService {
-  currentTheme = signal<Theme>('light');
+  currentTheme = signal<Theme>('dark');
 
   constructor(private cookieService: CookieService) {
     this.loadTheme();
@@ -15,7 +15,7 @@ export class ThemeService {
 
   loadTheme() {
     let theme = this.cookieService.get('theme') as CookieProps['theme'];
-    if (!theme) theme = 'light';
+    if (!theme) theme = 'dark';
     this.setTheme(theme);
   }
 
@@ -28,10 +28,10 @@ export class ThemeService {
 
   switchTheme() {
     let theme = this.cookieService.get('theme') as CookieProps['theme'];
-    if (theme === 'night') {
+    if (theme === 'dark') {
       this.setTheme('light');
     } else {
-      this.setTheme('night');
+      this.setTheme('dark');
     }
   }
 }
