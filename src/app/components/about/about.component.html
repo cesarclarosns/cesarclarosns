@@ -1,0 +1,33 @@
+<section id="about" class="flex flex-col gap-10 scroll-mt-40">
+  <p class="opacity-80">
+    En 2021 comencé mi camino como desarrollador Full-Stack y hasta ahora he
+    tenido la oportunidad de hacer desarrollo Front-end y Back-end, DevOps e
+    Infraestructura. Hoy en día estoy realmente interesado en crear productos
+    que vivan en el Internet.
+  </p>
+  <div class="flex flex-col gap-5">
+    <h1 class="font-bold">MI STACK</h1>
+    <div class="flex flex-col gap-2">
+      <div *ngFor="let hardSkill of hardSkills" class="flex flex-row gap-5">
+        <div>
+          <p class="font-semibold">{{ hardSkill.title }}:</p>
+          <ul class="list-disc pl-5">
+            <li
+              *ngFor="let skill of hardSkill.skills"
+              class="group hover:cursor-pointer hover:text-secondary-focus"
+            >
+              <a class="transition-all duration-300 ease-in-out">
+                <span
+                  class="bg-left-bottom bg-gradient-to-r from-secondary-focus to-secondary-focus bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                >
+                  {{ skill.title }}
+                </span>
+              </a>
+              &nbsp;&nbsp;
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
