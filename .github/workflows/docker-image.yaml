@@ -4,7 +4,7 @@ on:
   push:
     branches: ["current"]
     paths:
-      - "**"
+      - "client/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -36,6 +36,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           platforms: linux/amd64,linux/arm64/v8
+          context: "{{ defaultContext }}:client"
           file: Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
