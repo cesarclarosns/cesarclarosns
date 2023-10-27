@@ -24,14 +24,14 @@ export default function HomePage() {
         )}
       >
         <div>
-          <p className="text-6xl font-bold">
+          <p className="px-2 text-4xl font-bold md:text-6xl">
             FULL-STACK DEVELOPER AND ENGINEER
           </p>
         </div>
 
         <div className="flex items-center justify-center gap-2 rounded-full border-2 border-solid border-black px-4 py-2">
           <div className="relative">
-            <div className="bg-gradient-radial flex h-4 w-4 animate-pulse items-center justify-center rounded-full from-green-600 via-green-700 to-green-800">
+            <div className="flex h-4 w-4 animate-pulse items-center justify-center rounded-full bg-gradient-radial from-green-600 via-green-700 to-green-800">
               <div className="z-10 h-2 w-2 rounded-full bg-green-600"></div>
             </div>
           </div>
