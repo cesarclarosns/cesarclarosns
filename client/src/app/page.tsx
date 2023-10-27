@@ -63,7 +63,7 @@ export default function HomePage() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="hover:cursor-pointer">
-                <Link href={""} target="_blank">
+                <Link href={"/assets/pdfs/cv-eng.pdf"} target="_blank">
                   English
                 </Link>
               </DropdownMenuItem>
