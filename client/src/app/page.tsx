@@ -24,7 +24,7 @@ export default function HomePage() {
         )}
       >
         <div>
-          <p className="px-2 text-4xl font-bold md:text-6xl">
+          <p className="px-4 text-5xl font-bold md:text-6xl">
             FULL-STACK DEVELOPER AND ENGINEER
           </p>
         </div>
