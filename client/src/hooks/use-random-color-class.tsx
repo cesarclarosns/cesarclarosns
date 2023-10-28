@@ -16,7 +16,6 @@ const useRandomColorClass = ({ timeout = 3000 }: { timeout?: number }) => {
     const setRandomColorClass = () => {
       const index = Math.floor(Math.random() * colorClasses.length);
       const randomColorClass = colorClasses[index]!;
-      console.log({ randomColorClass });
       setColorClass(randomColorClass);
     };
 

@@ -7,12 +7,7 @@ import Icons from "@/components/ui/icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useToast } from "./ui/use-toast";
 
 interface Link {
@@ -29,8 +24,8 @@ const Header = () => {
       selected: false,
     },
     {
-      path: "/work",
-      name: "WORK",
+      path: "/experience",
+      name: "EXPERIENCE",
       selected: false,
     },
     {
@@ -79,11 +74,11 @@ const Header = () => {
             <Link href={"/"}>CÉSAR CLAROS</Link>
           </div>
           <div className="hidden gap-4 lg:flex">
-            {links.map((link) => {
+            {links.map((link, i) => {
               return (
                 <Link
+                  key={i}
                   href={link.path}
-                  key={link.name}
                   className={cn(
                     "hover:underline",
                     link.selected && "underline",
@@ -95,11 +90,11 @@ const Header = () => {
             })}
           </div>
           <div className="flex gap-4 lg:hidden">
-            {links.map((link) => {
+            {links.map((link, i) => {
               return (
                 <Link
+                  key={i}
                   href={link.path}
-                  key={link.name}
                   className={cn(
                     "hover:underline",
                     link.selected && "underline",
@@ -138,11 +133,11 @@ const Header = () => {
               colorClassSheet,
             )}
           >
-            {links.map((link) => {
+            {links.map((link, i) => {
               return (
                 <Link
+                  key={i}
                   href={link.path}
-                  key={link.name}
                   className={cn(
                     "text-xl font-bold hover:underline",
                     link.selected && "underline",

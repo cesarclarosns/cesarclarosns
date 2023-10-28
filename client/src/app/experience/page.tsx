@@ -14,7 +14,7 @@ interface Job {
   skills: { title: string; content: string }[];
 }
 
-export default function WorkPage() {
+export default function ExperiencePage() {
   const jobs: Job[] = [
     {
       role: "Full-Stack Developer",
@@ -62,43 +62,41 @@ export default function WorkPage() {
       <div className="flex flex-col gap-20">
         {jobs.map((job, i) => {
           return (
-            <>
-              <div key={i} className="flex flex-col gap-10 md:flex-row">
-                <div className="flex flex-col gap-5 md:basis-1/2">
-                  <div>
-                    <p className="text-2xl font-bold">{job.role}</p>
-                    <div className="flex items-center gap-2 text-2xl font-bold">
-                      <p>{job.at}</p>
-                      <Link href={job.url} target="_blank">
-                        <Icons.ExternalLinkIcon></Icons.ExternalLinkIcon>
-                      </Link>
-                    </div>
-                    <p className="font-medium">{job.period}</p>
+            <div key={i} className="flex flex-col gap-10 md:flex-row">
+              <div className="flex flex-col gap-5 md:basis-1/2">
+                <div>
+                  <p className="text-2xl font-extrabold">{job.role}</p>
+                  <div className="flex items-center gap-2 text-2xl font-bold">
+                    <p>{job.at}</p>
+                    <Link href={job.url} target="_blank">
+                      <Icons.ExternalLinkIcon></Icons.ExternalLinkIcon>
+                    </Link>
                   </div>
-                  <div className="flex flex-col gap-5">
-                    {job.description.map((d, i) => (
+                  <p className="font-medium">{job.period}</p>
+                </div>
+                <div className="flex flex-col gap-5">
+                  {job.description.map((d, i) => (
+                    <div key={i}>
+                      <span>{d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-10 md:basis-1/2">
+                <div className="flex flex-col gap-5">
+                  <p className=" font-extrabold underline">Skills</p>
+                  <div className="flex flex-col gap-2">
+                    {job.skills.map((skill, i) => (
                       <div key={i}>
-                        <span>{d}</span>
+                        <p className="font-medium">{skill.title}</p>
+                        <p>{skill.content}</p>
                       </div>
                     ))}
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-10 md:basis-1/2">
-                  <div className="flex flex-col gap-5">
-                    <p className=" font-bold underline">Skills</p>
-                    <div className="flex flex-col gap-2">
-                      {job.skills.map((skill, i) => (
-                        <div key={i}>
-                          <p className="font-medium">{skill.title}</p>
-                          <p>{skill.content}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
               </div>
-            </>
+            </div>
           );
         })}
       </div>

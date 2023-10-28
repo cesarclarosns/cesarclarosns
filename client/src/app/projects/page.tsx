@@ -85,56 +85,54 @@ export default function ProjectsPage() {
       <div className="flex flex-col gap-20">
         {projects.map((project, i) => {
           return (
-            <>
-              <div key={i} className="flex flex-col gap-10 md:flex-row">
-                <div className="flex flex-col gap-5 md:basis-1/2">
-                  <div>
-                    <p>
-                      <span className="text-2xl font-bold">
-                        {project.title}
-                      </span>
-                      {"  "}
-                      <span>
-                        {project.status === "in-progress"
-                          ? "(In progress)"
-                          : "(Released)"}
-                      </span>
-                    </p>
+            <div key={i} className="flex flex-col gap-10 md:flex-row">
+              <div className="flex flex-col gap-5 md:basis-1/2">
+                <div>
+                  <p>
+                    <span className="text-2xl font-extrabold">
+                      {project.title}
+                    </span>
+                    {"  "}
+                    <span>
+                      {project.status === "in-progress"
+                        ? "(In progress)"
+                        : "(Released)"}
+                    </span>
+                  </p>
 
-                    <div className="flex items-center gap-2 text-2xl font-bold">
-                      <Link href={project.url} target="_blank">
-                        <Icons.ExternalLinkIcon></Icons.ExternalLinkIcon>
-                      </Link>
+                  <div className="flex items-center gap-2 text-2xl font-bold">
+                    <Link href={project.url} target="_blank">
+                      <Icons.ExternalLinkIcon></Icons.ExternalLinkIcon>
+                    </Link>
 
-                      <Link href={project.repo} target="_blank">
-                        <Icons.GitHubLogoIcon></Icons.GitHubLogoIcon>
-                      </Link>
-                    </div>
+                    <Link href={project.repo} target="_blank">
+                      <Icons.GitHubLogoIcon></Icons.GitHubLogoIcon>
+                    </Link>
                   </div>
-                  <div className="flex flex-col gap-5">
-                    {project.description.map((d, i) => (
+                </div>
+                <div className="flex flex-col gap-5">
+                  {project.description.map((d, i) => (
+                    <div key={i}>
+                      <span>{d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-10 md:basis-1/2">
+                <div className="flex flex-col gap-5">
+                  <p className=" font-extrabold underline">Stack</p>
+                  <div className="flex flex-col gap-2">
+                    {project.stack.map((skill, i) => (
                       <div key={i}>
-                        <span>{d}</span>
+                        <p className="font-medium">{skill.title}</p>
+                        <p>{skill.content}</p>
                       </div>
                     ))}
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-10 md:basis-1/2">
-                  <div className="flex flex-col gap-5">
-                    <p className=" font-bold underline">Stack</p>
-                    <div className="flex flex-col gap-2">
-                      {project.stack.map((skill, i) => (
-                        <div key={i}>
-                          <p className="font-medium">{skill.title}</p>
-                          <p>{skill.content}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
               </div>
-            </>
+            </div>
           );
         })}
       </div>
