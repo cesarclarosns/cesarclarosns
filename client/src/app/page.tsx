@@ -29,11 +29,10 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center justify-center gap-2 rounded-full border-2 border-solid border-black px-4 py-2">
-          <div className="relative">
-            <div className="flex h-4 w-4 animate-pulse items-center justify-center rounded-full bg-gradient-radial from-green-600 via-green-700 to-green-800">
-              <div className="z-10 h-2 w-2 rounded-full bg-green-600"></div>
-            </div>
-          </div>
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+          </span>
           AVAILABLE FOR WORK
         </div>
 
