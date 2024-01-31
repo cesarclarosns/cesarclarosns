@@ -1,11 +1,16 @@
-import Layout from "@/components/layout";
-import { Toaster } from "@/components/ui/toaster";
-import { GeistSans } from "geist/font";
-import "@/styles/globals.css";
+import "~/styles/globals.css";
+
+// import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-sans",
+// });
 
 export const metadata = {
   title: "César Claros",
-  description: "Full-Stack Developer and Engineer.",
+  description: "Full-Stack Developer",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -16,9 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable}`}>
-        <Layout>{children}</Layout>
-        <Toaster></Toaster>
+      <body className={`font-sans ${GeistSans.className} bg-black`}>
+        {children}
       </body>
     </html>
   );
