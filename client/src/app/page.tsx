@@ -9,7 +9,7 @@ import Box from "~/components/box";
 
 export default function HomePage() {
   return (
-    <main className="flex h-screen flex-col items-center">
+    <main className="container flex h-screen flex-col items-center">
       <div className="relative flex min-h-screen flex-col items-center justify-center gap-5 text-white">
         <div className="flex flex-col items-center justify-center gap-2 px-7 py-4 text-center">
           <div className="flex items-center gap-2">
