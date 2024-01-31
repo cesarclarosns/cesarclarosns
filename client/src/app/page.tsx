@@ -19,7 +19,7 @@ export default function HomePage() {
             </span>
             <span>Available for work</span>
           </div>
-          <h1 className="inset-3 text-4xl font-semibold tracking-wider md:text-5xl lg:text-6xl">
+          <h1 className="inset-3 text-[2.5rem] font-semibold tracking-wider md:text-5xl lg:text-6xl">
             Full-Stack Developer
           </h1>
         </div>
