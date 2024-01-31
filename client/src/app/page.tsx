@@ -1,13 +1,11 @@
-"use client";
-
 import Link from "next/link";
-import { cn } from "~/libs/utils";
 import {
   LinkedInLogoIcon,
   GitHubLogoIcon,
   DownloadIcon,
   InstagramLogoIcon,
 } from "@radix-ui/react-icons";
+import Box from "~/components/box";
 
 export default function HomePage() {
   return (
@@ -59,26 +57,5 @@ export default function HomePage() {
         </div>
       </div>
     </main>
-  );
-}
-
-interface BoxProps extends React.ComponentPropsWithoutRef<"div"> {
-  children: React.ReactNode;
-}
-
-export function Box({ children, className }: BoxProps) {
-  return (
-    <div className="group relative hover:cursor-pointer">
-      <div
-        className={cn(
-          "absolute -inset-0.5 rounded-md bg-green-200 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200",
-          className,
-        )}
-      />
-
-      <div className="relative flex items-center rounded-lg bg-black px-7 py-4 leading-none">
-        {children}
-      </div>
-    </div>
   );
 }
